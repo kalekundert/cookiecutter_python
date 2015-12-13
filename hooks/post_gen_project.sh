@@ -14,7 +14,3 @@ virtualenv -p python3 env
 env/bin/pip install bumpversion know_its_ok sphinx
 env/bin/pip install -e .
 
-# Encrypt you PyPI password for Travis CI.
-
-travis encrypt --add deploy.password -r {{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
-
