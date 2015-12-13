@@ -6,6 +6,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
+import re
 with open('{{ cookiecutter.project_slug }}/__init__.py') as file:
     version_pattern = re.compile("__version__ = '(.*)'")
     version = version_pattern.search(file.read()).group(1)
@@ -15,7 +16,7 @@ with open('README.rst') as file:
 
 setup(
     name='{{ cookiecutter.project_slug }}',
-    version=__version__,
+    version=version,
     author='{{ cookiecutter.full_name }}',
     author_email='{{ cookiecutter.email }}',
     description='{{ cookiecutter.project_short_description }}',
