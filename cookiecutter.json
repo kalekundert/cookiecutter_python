@@ -3,7 +3,7 @@
 	"email": "",
 	"github_username": "",
 	"pypi_username": "{{ cookiecutter.github_username }}",
-	"project_name": "My Game",
+	"project_name": "My Library",
 	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
 	"project_short_description": "",
 }
