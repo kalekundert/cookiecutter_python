@@ -10,7 +10,6 @@ import re
 with open('{{ cookiecutter.project_slug }}/__init__.py') as file:
     version_pattern = re.compile("__version__ = '(.*)'")
     version = version_pattern.search(file.read()).group(1)
-
 with open('README.rst') as file:
     readme = file.read()
 
@@ -25,26 +24,17 @@ setup(
     packages=[
         '{{ cookiecutter.project_slug }}',
     ],
-    include_package_data=True,
+    entry_points={
+        'console_scripts': [
+            '{{ cookiecutter.project_slug }}={{ cookiecutter.project_slug }}.main',
+        ],
+    },
     install_requires=[
     ],
-    license='MIT',
-    zip_safe=False,
     keywords=[
         '{{ cookiecutter.project_slug }}',
     ],
-    classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Natural Language :: English',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.0',
-        'Programming Language :: Python :: 3.1',
-        'Programming Language :: Python :: 3.2',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Topic :: Software Development :: Libraries',
-    ],
+    include_package_data=True,
+    license='MIT',
+    zip_safe=False,
 )

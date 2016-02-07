@@ -2,23 +2,16 @@
 cookiecutter-kxg
 ****************
 
-A cookiecutter template for my python libraries.  See 
+A cookiecutter template for my python applications.  See 
 https://github.com/audreyr/cookiecutter.  This cookiecutter will::
 
 1. Create a ``setup.py`` file that is immediately ready to use.
 
 2. Create a ready-to-use Sphinx directory for documentation.
 
-3. Create a test command that can be called from anywhere in the repository.
-
 4. Create an ``__init__.py`` with ``__version__`` filled in.
 
-5. Copy the MIT license text into the project.
-
-6. Configure Travis CI to run pytest and to deploy new versions to PyPI.
-
-7. Create a virtual environment with ``know_its_ok``, ``bumpversion``, 
-   ``sphinx``, and your new library already installed.
+5. Copy the GPLv3 license text into the project.
 
 8. Create a ``git`` repository and commit all the boilerplate files included in 
    the cookiecutter.
@@ -28,13 +21,13 @@ Making a new library
 Just give ``cookiecutter`` the path to this repository and answer all of its 
 questions::
 
-   cookiecutter https://github.com/kalekundert/cookiecutter_pylib.git
+   cookiecutter https://github.com/kalekundert/cookiecutter_pyapp.git
 
 If you find yourself using this cookie cutter a lot, you can save yourself some 
 typing by aliasing it in your ``~/.cookiecutterrc`` file::
 
    abbreviations:
-       py: https://github.com/kalekundert/cookiecutter_pylib.git
+       pyapp: https://github.com/kalekundert/cookiecutter_pyapp.git
 
 Publishing to PyPI
 ==================
