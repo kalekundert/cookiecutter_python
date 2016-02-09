@@ -1,6 +1,6 @@
-****************
-cookiecutter-kxg
-****************
+******************
+cookiecutter_pyapp
+******************
 
 A cookiecutter template for my python applications.  See 
 https://github.com/audreyr/cookiecutter.  This cookiecutter will::
@@ -9,12 +9,11 @@ https://github.com/audreyr/cookiecutter.  This cookiecutter will::
 
 2. Create a ready-to-use Sphinx directory for documentation.
 
-4. Create an ``__init__.py`` with ``__version__`` filled in.
+3. Create an ``__init__.py`` with ``__version__`` filled in.
 
-5. Copy the GPLv3 license text into the project.
+4. Copy the GPLv3 license text into the project.
 
-8. Create a ``git`` repository and commit all the boilerplate files included in 
-   the cookiecutter.
+5. Create a ``git`` repository and make an initial commit.
 
 Making a new library
 ====================
