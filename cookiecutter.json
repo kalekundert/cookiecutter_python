@@ -1,6 +1,7 @@
 {
 	"full_name": "",
-	"email": "",
+    "email": "{{ cookiecutter.full_name.lower().replace(' ', '.') }}@ucsf.edu",
+    "github_username": "{{ cookiecutter.full_name.lower().replace(' ', '') }}",
 	"project_name": "My Application",
 	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}"
 }
