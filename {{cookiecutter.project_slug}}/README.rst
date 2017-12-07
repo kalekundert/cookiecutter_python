@@ -16,7 +16,14 @@
 
 Installation
 ============
-Coming soon...
+To install use pip:
+
+    $ pip install {{ cookiecutter.project_slug }}
+
+Or clone the repo:
+
+    $ git clone https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+    $ python setup.py install
 
 Usage
 =====
