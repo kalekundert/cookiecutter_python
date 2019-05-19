@@ -5,7 +5,7 @@ cookiecutter_pyapp
 A cookiecutter template for my python applications.  See 
 https://github.com/audreyr/cookiecutter.  This cookiecutter will::
 
-1. Create a ``setup.py`` file that is immediately ready to use.
+1. Create a ``setup.py`` file that's immediately ready to use.
 
 2. Create a ready-to-use Sphinx directory for documentation.
 
