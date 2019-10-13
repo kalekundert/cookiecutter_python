@@ -1,24 +1,27 @@
-****************
-cookiecutter-kxg
-****************
+******************
+cookiecutter-pylib
+******************
 
 A cookiecutter template for my python libraries.  See 
 https://github.com/audreyr/cookiecutter.  This cookiecutter will::
 
-1. Create a ``setup.py`` file that is immediately ready to use.
+1. Configure a ``pyproject.toml`` file to be used with ``flit`` to package and 
+   distribute the project.
 
-2. Create a ready-to-use Sphinx directory for documentation.
+2. Configure a ``docs`` directory for use with Sphinx and Read The Docs.
 
-3. Create a test command that can be called from anywhere in the repository.
+3. Configure a ``tests`` directory for use with ``pytest``.
 
-4. Create an ``__init__.py`` with ``__version__`` filled in.
+6. Configure Travis CI to run ``pytest`` and copy coverage results to 
+   Coveralls.
+
+4. Create an ``__init__.py`` with ``__version__`` filled in, and configure 
+   ``bumpversion`` to manage that version number.
+
+5. Create a ``README.rst`` file with badges indicating the health of the 
+   project.
 
 5. Copy the MIT license text into the project.
-
-6. Configure Travis CI to run pytest and to deploy new versions to PyPI.
-
-7. Create a virtual environment with ``know_its_ok``, ``bumpversion``, 
-   ``sphinx``, and your new library already installed.
 
 8. Create a ``git`` repository and commit all the boilerplate files included in 
    the cookiecutter.
@@ -34,24 +37,27 @@ If you find yourself using this cookie cutter a lot, you can save yourself some
 typing by aliasing it in your ``~/.cookiecutterrc`` file::
 
    abbreviations:
-       py: https://github.com/kalekundert/cookiecutter_pylib.git
+       pylib: https://github.com/kalekundert/cookiecutter_pylib.git
 
 Publishing to PyPI
 ==================
 When you want to publish a version of your library to PyPI, the first step is 
-to increment the version number stored in ``__init__.py`` and to commit that 
-with a tag that matches the new version.  You can do using the ``bumpversion`` 
-command (pre-installed in the virtual environment) to do this automatically::
+to make sure all of the tests pass on the continuous integration server.  
+Enable Travis CI for the repository (if you haven't already) and push to 
+GitHub::
+
+   $ git push
+
+Once the tests pass, use ``bumpversion`` to increment the version number as 
+appropriate::
 
    $ bumpversion major
    $ bumpversion minor
    $ bumpversion patch
 
-Then, assuming you've enabled Travis CI for the repository, just push to 
-``github``.  Travis CI will run your tests again to make sure the new version 
-works as expected and will then automatically deploy to PyPI::
+Then, use ``flit`` to publish the new release to PyPI::
 
-   $ git push
+   $ flit publish
 
 Not Exactly What You Want?
 ==========================

@@ -26,6 +26,8 @@ import {{ cookiecutter.project_slug }}
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
+    'sphinx.ext.intersphinx',
+    'sphinx_rtd_theme',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -69,7 +71,7 @@ exclude_patterns = ['_build']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
-#default_role = None
+default_role = 'any'
 
 # If true, '()' will be appended to :func: etc. cross-reference text.
 #add_function_parentheses = True
@@ -96,7 +98,7 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -174,7 +176,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'cookiecutterproject_namedoc'
+htmlhelp_basename = '{{ cookiecutter.project_name }}doc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -194,8 +196,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'cookiecutterproject_name.tex', u'\\{\\{ cookiecutter.project\\_name \\}\\} Documentation',
-   u'\\{\\{ cookiecutter.full\\_name \\}\\}', 'manual'),
+  ('index', '{{ cookiecutter.project_name }}.tex', u'{{ cookiecutter.project_name }} Documentation',
+   u'{{ cookiecutter.full_name }}', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -224,7 +226,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'cookiecutterproject_name', u'{{ cookiecutter.project_name }} Documentation',
+    ('index', '{{ cookiecutter.project_name }}', u'{{ cookiecutter.project_name }} Documentation',
      [u'{{ cookiecutter.full_name }}'], 1)
 ]
 
@@ -238,8 +240,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'cookiecutterproject_name', u'{{ cookiecutter.project_name }} Documentation',
-   u'{{ cookiecutter.full_name }}', 'cookiecutterproject_name', 'One line description of project.',
+  ('index', '{{ cookiecutter.project_name }}', u'{{ cookiecutter.project_name }} Documentation',
+   u'{{ cookiecutter.full_name }}', '{{ cookiecutter.project_name }}', 'One line description of project.',
    'Miscellaneous'),
 ]
 
