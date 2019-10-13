@@ -12,16 +12,16 @@ https://github.com/audreyr/cookiecutter.  This cookiecutter will::
 
 3. Configure a ``tests`` directory for use with ``pytest``.
 
-6. Configure Travis CI to run ``pytest`` and copy coverage results to 
+4. Configure Travis CI to run ``pytest`` and copy coverage results to 
    Coveralls.
 
-4. Create an ``__init__.py`` with ``__version__`` filled in, and configure 
+5. Create an ``__init__.py`` with ``__version__`` filled in, and configure 
    ``bumpversion`` to manage that version number.
 
-5. Create a ``README.rst`` file with badges indicating the health of the 
+6. Create a ``README.rst`` file with badges indicating the health of the 
    project.
 
-5. Copy the MIT license text into the project.
+7. Copy the MIT license text into the project.
 
 8. Create a ``git`` repository and commit all the boilerplate files included in 
    the cookiecutter.
