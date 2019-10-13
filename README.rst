@@ -5,15 +5,26 @@ cookiecutter_pyapp
 A cookiecutter template for my python applications.  See 
 https://github.com/audreyr/cookiecutter.  This cookiecutter will::
 
-1. Create a ``setup.py`` file that's immediately ready to use.
+1. Configure a ``pyproject.toml`` file to be used with ``flit`` to package and 
+   distribute the project.
 
-2. Create a ready-to-use Sphinx directory for documentation.
+2. Configure a ``docs`` directory for use with Sphinx and Read The Docs.
 
-3. Create an ``__init__.py`` with ``__version__`` filled in.
+3. Configure a ``tests`` directory for use with ``pytest``.
 
-4. Copy the GPLv3 license text into the project.
+4. Configure Travis CI to run ``pytest`` and copy coverage results to 
+   Coveralls.
 
-5. Create a ``git`` repository and make an initial commit.
+5. Create an ``__init__.py`` with ``__version__`` filled in, and configure 
+   ``bumpversion`` to manage that version number.
+
+6. Create a ``README.rst`` file with badges indicating the health of the 
+   project.
+
+7. Copy the MIT license text into the project.
+
+8. Create a ``git`` repository and commit all the boilerplate files included in 
+   the cookiecutter.
 
 Making a new application
 ========================
@@ -30,26 +41,23 @@ typing by aliasing it in your ``~/.cookiecutterrc`` file::
 
 Publishing to PyPI
 ==================
-When you want to publish a version of your application to PyPI, the first step 
-is to increment the version number stored in ``__init__.py`` and to commit that 
-with a tag that matches the new version.  You can do using the ``bumpversion`` 
-command (pre-installed in the virtual environment) to do this automatically::
+When you want to publish a version of your library to PyPI, the first step is 
+to make sure all of the tests pass on the continuous integration server.  
+Enable Travis CI for the repository (if you haven't already) and push to 
+GitHub::
+
+   $ git push
+
+Once the tests pass, use ``bumpversion`` to increment the version number as 
+appropriate::
 
    $ bumpversion major
    $ bumpversion minor
    $ bumpversion patch
 
-The next step is to upload your project.  If you haven't already registered 
-your project, run this command before anything else::
+Then, use ``flit`` to publish the new release to PyPI::
 
-   $ python setup.py register
-
-This command will ask for your PyPI login credentials unless you've already 
-provided them in your ``~/.pypirc`` file, which is probably worthwhile if 
-you're creating enough new project to warrant using ``cookiecutter``.  Once 
-your project is registered, upload it with the following command::
-
-   $ python setup.py sdist upload
+   $ flit publish
 
 Not Exactly What You Want?
 ==========================
