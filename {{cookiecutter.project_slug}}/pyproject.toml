@@ -14,6 +14,9 @@ classifiers = [
   'License :: OSI Approved :: MIT License',
 ]
 
+[tool.flit.scripts]
+{{ cookiecutter.project_slug }} = "{{ cookiecutter.project_slug }}:main"
+
 [tool.flit.metadata.urls]
 'Documentation' = 'https://{{ cookiecutter.project_slug }}.readthedocs.io/en/latest/'
 'Version Control' = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
