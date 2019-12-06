@@ -11,11 +11,13 @@ requires-python = "~={{ cookiecutter.python_version }}"
 requires = []
 classifiers = [
   'Programming Language :: Python :: {{ cookiecutter.python_version.split('.')[0] }}',
-  'License :: OSI Approved :: MIT License',
+  'License :: OSI Approved :: {{"GNU General Public License v3 (GPLv3)" if cookiecutter.project_type == "application" else "MIT License"}}',
 ]
 
+{% if cookiecutter.project_type == 'application' -%}
 [tool.flit.scripts]
 {{ cookiecutter.project_slug }} = "{{ cookiecutter.project_slug }}:main"
+{%- endif %}
 
 [tool.flit.metadata.urls]
 'Documentation' = 'https://{{ cookiecutter.project_slug }}.readthedocs.io/en/latest/'

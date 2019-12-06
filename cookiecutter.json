@@ -4,5 +4,6 @@
 	"github_username": "",
 	"project_name": "My Application",
 	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "project_type": ["library", "application"],
   "python_version": "3.7"
 }

@@ -21,7 +21,7 @@ https://github.com/audreyr/cookiecutter.  This cookiecutter will::
 6. Create a ``README.rst`` file with badges indicating the health of the 
    project.
 
-7. Copy the MIT license text into the project.
+7. Copy either the MIT of GPLv3 license into the project.
 
 8. Create a ``git`` repository and commit all the boilerplate files included in 
    the cookiecutter.
@@ -37,7 +37,7 @@ If you find yourself using this cookiecutter a lot, you can save yourself some
 typing by aliasing it in your ``~/.cookiecutterrc`` file::
 
    abbreviations:
-       pyapp: https://github.com/kalekundert/cookiecutter_pyapp.git
+       py: https://github.com/kalekundert/cookiecutter_python.git
 
 Publishing to PyPI
 ==================
@@ -61,10 +61,10 @@ Then, use ``flit`` to publish the new release to PyPI::
 
 Not Exactly What You Want?
 ==========================
-If you have differences in your preferred setup, I encourage you to fork this
-to create your own version.  Or create your own; it doesn't strictly have to
-be a fork.  It's up to you whether or not to rename your fork/own version. Do 
-whatever you think sounds good.  I'll also accept pull requests if they're 
+If you have differences in your preferred setup, I encourage you to fork this 
+to create your own version.  Or just create your own; it doesn't strictly have 
+to be a fork.  It's up to you whether or not to rename your fork/own version. 
+Do whatever you think sounds good.  I'll also accept pull requests if they're 
 small, atomic, and if they make my own development experience better.
 
 .. _Travis-CI: http://travis-ci.org/
