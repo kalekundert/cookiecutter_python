@@ -1,6 +1,6 @@
-******************
-cookiecutter_pyapp
-******************
+*******************
+cookiecutter_python
+*******************
 
 A cookiecutter template for my python applications.  See 
 https://github.com/audreyr/cookiecutter.  This cookiecutter will::
