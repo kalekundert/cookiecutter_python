@@ -9,7 +9,8 @@ author-email = "{{ cookiecutter.email }}"
 home-page = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
 description-file = 'README.rst'
 requires-python = "~={{ cookiecutter.python_version }}"
-requires = []
+requires = [
+]
 classifiers = [
   'Programming Language :: Python :: {{ cookiecutter.python_version.split('.')[0] }}',
   'License :: OSI Approved :: {{"GNU General Public License v3 (GPLv3)" if cookiecutter.project_type == "application" else "MIT License"}}',
@@ -27,4 +28,6 @@ classifiers = [
 'Continuous Integration' = 'https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
 'Test Coverage' = 'https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
 
+[tool.semantic_release]
+version_variable = '{{ cookiecutter.project_slug }}/__init__.py:__version__'
 
