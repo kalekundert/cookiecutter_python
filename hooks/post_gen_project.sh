@@ -10,7 +10,7 @@ git commit -m "Initial commit."
 
 cat <<EOF > .git/hooks/commit-msg
 #!/usr/bin/env sh
-commitlint -e $1
+commitlint -e \$1
 EOF
 chmod u+x .git/hooks/commit-msg
 
