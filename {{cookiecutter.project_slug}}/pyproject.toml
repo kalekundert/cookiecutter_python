@@ -15,6 +15,18 @@ classifiers = [
   'Programming Language :: Python :: {{ cookiecutter.python_version.split('.')[0] }}',
   'License :: OSI Approved :: {{"GNU General Public License v3 (GPLv3)" if cookiecutter.project_type == "application" else "MIT License"}}',
 ]
+
+[tool.flit.metadata.requires-extra]
+tests = [
+  'pytest',
+  'pytest-cov',
+  'coveralls',
+]
+docs = [
+  'sphinx',
+  'sphinx_rtd_theme',
+  'autoclasstoc',
+]
 {% if cookiecutter.project_type == 'application' -%}
 [tool.flit.scripts]
 {{ cookiecutter.project_slug }} = "{{ cookiecutter.project_slug }}:main"
