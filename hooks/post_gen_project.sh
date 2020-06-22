@@ -14,4 +14,12 @@ commitlint -e \$1
 EOF
 chmod u+x .git/hooks/commit-msg
 
+cat <<EOF
+****************************************************************
+Once you setup a repository on Github, don't forget to add the
+following tokens:
 
+- COVERALL_TOKEN:  https://coveralls.io/github/<username>/<slug>
+- PYPI_TOKEN:      https://pypi.org/manage/account/token/
+****************************************************************
+EOF
