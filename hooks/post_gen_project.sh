@@ -6,7 +6,7 @@ set -xeuo pipefail
 
 git init
 git add .
-git commit -m "Initial commit."
+git commit -m "initial commit"
 
 cat <<EOF > .git/hooks/commit-msg
 #!/usr/bin/env sh
