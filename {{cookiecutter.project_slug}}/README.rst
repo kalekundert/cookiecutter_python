@@ -11,8 +11,8 @@
 .. image:: https://img.shields.io/readthedocs/{{ cookiecutter.project_slug }}.svg
    :target: https://{{ cookiecutter.project_slug }}.readthedocs.io/en/latest/?badge=latest
 
-.. image:: https://img.shields.io/travis/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
-   :target: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+.. image:: https://img.shields.io/github/workflow/status/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/Test%20and%20release/master
+   :target: https://github.com/kalekundert/{{ cookiecutter.project_slug }}/actions
 
 .. image:: https://img.shields.io/coveralls/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
    :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}?branch=master
