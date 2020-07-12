@@ -19,7 +19,7 @@ cat <<EOF
 Once you setup a repository on Github, don't forget to add the
 following tokens:
 
-- COVERALL_TOKEN:  https://coveralls.io/github/<username>/<slug>
+- COVERALL_TOKEN:  https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
 - PYPI_TOKEN:      https://pypi.org/manage/account/token/
 ****************************************************************
 EOF
