@@ -19,7 +19,7 @@
 
 Installation
 ============
-Install {{ cookiecutter.project_slug }} using ``pip``::
+Install ``{{ cookiecutter.project_slug }}`` using ``pip``::
 
     $ pip install {{ cookiecutter.project_slug }}
 
