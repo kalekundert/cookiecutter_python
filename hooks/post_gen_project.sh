@@ -15,11 +15,10 @@ EOF
 chmod u+x .git/hooks/commit-msg
 
 cat <<EOF
-****************************************************************
-Once you setup a repository on Github, don't forget to add the
-following tokens:
+********************************************************************************
+Once you setup a repository on Github, add the following secrets:
 
-- COVERALL_TOKEN:  https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
-- PYPI_TOKEN:      https://pypi.org/manage/account/token/
-****************************************************************
+- COVERALLS_TOKEN:  https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+- PYPI_TOKEN:       https://pypi.org/manage/account/token/
+********************************************************************************
 EOF
