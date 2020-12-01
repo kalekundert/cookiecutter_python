@@ -3,6 +3,16 @@ name: Test and release
 on: push
 jobs:
 
+  commitlint:
+    name: Check commit message
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+￼       with:
+￼         fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v2
+
   test:
     name: Test
     runs-on: ubuntu-latest
