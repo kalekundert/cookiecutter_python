@@ -23,6 +23,7 @@ extensions = [
         'sphinx.ext.autosummary',
         'sphinx.ext.viewcode',
         'sphinx.ext.intersphinx',
+        'sphinx.ext.napoleon',
         'sphinx_rtd_theme',
 ]
 intersphinx_mapping = {
