@@ -38,6 +38,10 @@ docs = [
 'Continuous Integration' = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions'
 'Test Coverage' = 'https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
 
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --doctest-glob='*.rst'"
+doctest_optionflags = 'NORMALIZE_WHITESPACE'
+
 [tool.semantic_release]
 version_variable = '{{ cookiecutter.project_slug }}/__init__.py:__version__'
 build_command = 'python -m pip install flit && flit build'
