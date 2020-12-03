@@ -17,12 +17,3 @@
 .. image:: https://img.shields.io/coveralls/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
    :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}?branch=master
 
-Installation
-============
-Install ``{{ cookiecutter.project_slug }}`` using ``pip``::
-
-    $ pip install {{ cookiecutter.project_slug }}
-
-Usage
-=====
-Coming soon...
