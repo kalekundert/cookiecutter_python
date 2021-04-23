@@ -46,6 +46,8 @@ doctest_optionflags = 'NORMALIZE_WHITESPACE'
 [tool.pccc]
 header_length = 72
 types = ["chore", "docs", "feat", "fix", "refactor", "style", "test"]
+ignore_generated_commits = true
+generated_commits = ['^Merge']
 
 [tool.semantic_release]
 version_variable = '{{ cookiecutter.project_slug }}/__init__.py:__version__'
