@@ -23,5 +23,5 @@
    :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}?branch=master
 
 .. image:: https://img.shields.io/github/last-commit/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}?logo=github
-   :alt: GitHub last commit
+   :alt: Last commit
    :target: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
