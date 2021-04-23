@@ -20,6 +20,7 @@ classifiers = [
 test = [
   'pytest',
   'pytest-cov',
+  'parametrize_from_file',
   'coveralls',
 ]
 doc = [
