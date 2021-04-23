@@ -6,7 +6,7 @@ set -xeuo pipefail
 
 git init
 git add .
-git commit -m "initial commit"
+git commit -m "chore: apply cookiecutter"
 
 cat <<EOF > .git/hooks/commit-msg
 #!/usr/bin/env sh
