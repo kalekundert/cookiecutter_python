@@ -14,6 +14,8 @@ templates_path = ['_templates']
 exclude_patterns = ['_build']
 html_static_path = ['_static']
 default_role = 'any'
+trim_footnote_reference_space = True
+nitpicky = True
 
 ## Extensions
 
