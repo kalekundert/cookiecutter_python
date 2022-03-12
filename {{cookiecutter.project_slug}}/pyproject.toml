@@ -1,22 +1,18 @@
 [build-system]
-requires = ["flit"]
-build-backend = "flit.buildapi"
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
 
-[tool.flit.metadata]
-module = "{{ cookiecutter.project_slug}}"
-author = "{{ cookiecutter.full_name }}"
-author-email = "{{ cookiecutter.email }}"
-home-page = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
-description-file = 'README.rst'
+[project]
+name = "{{ cookiecutter.project_slug}}"
+authors = [
+  {name = "{{ cookiecutter.full_name }}", email = "{{ cookiecutter.email }}"},
+]
+readme = 'README.rst'
 requires-python = "~={{ cookiecutter.python_version }}"
-requires = [
-]
-classifiers = [
-  'Programming Language :: Python :: {{ cookiecutter.python_version.split('.')[0] }}',
-  'License :: OSI Approved :: {{"GNU General Public License v3 (GPLv3)" if cookiecutter.project_type == "application" else "MIT License"}}',
+dependencies = [
 ]
 
-[tool.flit.metadata.requires-extra]
+[project.optional-dependencies]
 test = [
   'pytest',
   'pytest-cov',
@@ -29,10 +25,10 @@ doc = [
   'autoclasstoc',
 ]
 {% if cookiecutter.project_type == 'application' -%}
-[tool.flit.scripts]
+[project.scripts]
 {{ cookiecutter.project_slug }} = "{{ cookiecutter.project_slug }}:main"
 {%- endif %}
-[tool.flit.metadata.urls]
+[project.urls]
 'Documentation' = 'https://{{ cookiecutter.project_slug }}.readthedocs.io/en/latest/'
 'Version Control' = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
 'Bug Tracker' = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues'
