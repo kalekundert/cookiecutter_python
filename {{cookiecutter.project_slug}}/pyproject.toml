@@ -46,6 +46,7 @@ ignore_generated_commits = true
 generated_commits = ['^Merge']
 
 [tool.semantic_release]
+branch = 'release'
 version_variable = '{{ cookiecutter.project_slug }}/__init__.py:__version__'
 build_command = 'python -m pip install flit && flit build'
 major_on_zero = false
