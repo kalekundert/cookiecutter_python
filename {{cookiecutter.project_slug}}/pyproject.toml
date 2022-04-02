@@ -8,6 +8,7 @@ authors = [
   {name = "{{ cookiecutter.full_name }}", email = "{{ cookiecutter.email }}"},
 ]
 readme = 'README.rst'
+dynamic = ["version", "description"]
 requires-python = "~={{ cookiecutter.python_version }}"
 dependencies = [
 ]
