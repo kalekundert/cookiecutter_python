@@ -1,7 +1,8 @@
-name: Test and release
+name: Test
 
 on:
   push:
+  pull_request:
   schedule:
     - cron: '0 17 1,15 * *'
 
@@ -18,7 +19,7 @@ jobs:
       - uses: wagoid/commitlint-github-action@v2
 
   test:
-    name: Test
+    name: Run pytest
     runs-on: ubuntu-latest
 
     strategy:
@@ -42,21 +43,3 @@ jobs:
           COVERALLS_REPO_TOKEN: {{ '${{ secrets.COVERALLS_TOKEN }}' }}
         run: |
           coveralls
-
-  release:
-    name: Release to PyPI
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/release'
-    needs: [test]
-
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          # Make sure the whole repository history is present, so that 
-          # python-semantic-release can decide if a new release is needed.
-          fetch-depth: 0
-
-      - uses: relekang/python-semantic-release@master
-        with:
-          github_token: {{ '${{ secrets.GITHUB_TOKEN }}' }}
-          pypi_token: {{ '${{ secrets.PYPI_TOKEN }}' }}
