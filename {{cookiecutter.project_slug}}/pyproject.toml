@@ -19,9 +19,7 @@ dependencies = [
 [project.optional-dependencies]
 test = [
   'pytest',
-  'pytest-cov',
   'parametrize_from_file',
-  'coveralls',
 ]
 doc = [
   'sphinx',
@@ -42,6 +40,17 @@ doc = [
 [tool.pytest.ini_options]
 addopts = "--doctest-modules --doctest-glob='*.rst'"
 doctest_optionflags = 'NORMALIZE_WHITESPACE'
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = ['{{ cookiecutter.project_slug }}']
+
+[tool.coverage.report]
+exclude_lines = [
+    "^\\s*raise AssertionError\\b",
+    "^\\s*raise NotImplementedError\\b",
+]
 
 [tool.pccc]
 header_length = 72
