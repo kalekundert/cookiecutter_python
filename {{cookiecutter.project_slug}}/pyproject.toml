@@ -31,7 +31,7 @@ doc = [
 {{ cookiecutter.project_slug }} = "{{ cookiecutter.project_slug }}:main"
 {%- endif %}
 [project.urls]
-'Documentation' = 'https://{{ cookiecutter.project_slug }}.readthedocs.io/en/latest/'
+'Documentation' = 'https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/'
 'Version Control' = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
 'Bug Tracker' = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues'
 'Continuous Integration' = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions'

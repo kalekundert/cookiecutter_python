@@ -12,7 +12,7 @@
 
 .. image:: https://img.shields.io/readthedocs/{{ cookiecutter.project_slug }}.svg
    :alt: Documentation
-   :target: https://{{ cookiecutter.project_slug }}.readthedocs.io/en/latest/?badge=latest
+   :target: https://{{ cookiecutter.project_slug  | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest
 
 .. image:: https://img.shields.io/github/actions/workflow/status/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/test.yml?branch=master
    :alt: Test status
