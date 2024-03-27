@@ -1,8 +1,8 @@
-Once the code is written, upload to PyPI:
+Create a "pending" trusted publisher:
 
-  $ flit publish
+  https://pypi.org/manage/account/publishing/
 
-Then add the following secret to the Github repository:
-
-  PYPI_TOKEN:  https://pypi.org/manage/account/token/
-
+  PyPI project name: {{ cookiecutter.project_slug }}
+  Owner:             {{ cookiecutter.github_username }}
+  Repository name:   {{ cookiecutter.project_slug }}
+  Workflow name:     release.yml
