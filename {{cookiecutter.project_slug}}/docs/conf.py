@@ -1,4 +1,3 @@
-import sys, os
 import {{ cookiecutter.project_slug }}
 
 ## General
