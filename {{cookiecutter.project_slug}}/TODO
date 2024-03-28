@@ -1,4 +1,4 @@
-Create a "pending" trusted publisher:
+- Create a "pending" trusted publisher:
 
   https://pypi.org/manage/account/publishing/
 
@@ -6,3 +6,8 @@ Create a "pending" trusted publisher:
   Owner:             {{ cookiecutter.github_username }}
   Repository name:   {{ cookiecutter.project_slug }}
   Workflow name:     release.yml
+
+- Add Codecov token to GitHub:
+
+  https://app.codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/new
+  https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/settings/secrets/actions/new

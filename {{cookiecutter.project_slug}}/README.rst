@@ -12,7 +12,7 @@
 
 .. image:: https://img.shields.io/readthedocs/{{ cookiecutter.project_slug }}.svg
    :alt: Documentation
-   :target: https://{{ cookiecutter.project_slug  | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest
+   :target: https://{{ cookiecutter.project_slug  | replace("_", "-") }}.readthedocs.io/en/latest/
 
 .. image:: https://img.shields.io/github/actions/workflow/status/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/test.yml?branch=master
    :alt: Test status
@@ -21,6 +21,10 @@
 .. image:: https://img.shields.io/coveralls/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
    :alt: Test coverage
    :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}?branch=master
+
+.. image:: https://img.shields.io/codecov/c/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+   :alt: Test coverage
+   :target: https://app.codecov.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
 
 .. image:: https://img.shields.io/github/last-commit/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}?logo=github
    :alt: Last commit
