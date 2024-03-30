@@ -40,7 +40,7 @@ jobs:
       - name: Store coverage data
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-data-${{ matrix.python-version }}
+          name: coverage-data-{{ '${{ matrix.python-version }}' }}
           path: .coverage.*
           if-no-files-found: ignore
 
@@ -70,4 +70,4 @@ jobs:
       - name: Upload Codecov report
         uses: codecov/codecov-action@v4
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          token: {{ '${{ secrets.CODECOV_TOKEN }}' }}
