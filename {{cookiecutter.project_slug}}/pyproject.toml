@@ -35,7 +35,7 @@ doc = [
 'Version Control' = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
 'Bug Tracker' = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues'
 'Continuous Integration' = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions'
-'Test Coverage' = 'https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
+'Test Coverage' = 'https://app.codecov.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
 
 [tool.ruff.lint]
 select = ["F"]
