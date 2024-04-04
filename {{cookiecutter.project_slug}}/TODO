@@ -1,3 +1,12 @@
+- Create a new GitHub repository:
+
+  https://github.com/new
+
+  Repository name: {{ cookiecutter.project_slug }}
+
+  $ git remote add origin git@github.com:kalekundert/{{ cookiecutter.project_slug }}.git
+  $ git push -u origin master
+
 - Create a "pending" trusted publisher:
 
   https://pypi.org/manage/account/publishing/
