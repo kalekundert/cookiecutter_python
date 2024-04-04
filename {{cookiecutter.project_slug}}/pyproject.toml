@@ -7,7 +7,7 @@ name = "{{ cookiecutter.project_slug}}"
 authors = [
   {name = "{{ cookiecutter.full_name }}", email = "{{ cookiecutter.email }}"},
 ]
-readme = 'README.rst'
+readme = 'README.md'
 dynamic = ["version", "description"]
 requires-python = "~={{ cookiecutter.python_version }}"
 classifiers = [
