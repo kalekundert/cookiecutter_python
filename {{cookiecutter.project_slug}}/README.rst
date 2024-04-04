@@ -18,11 +18,8 @@
    :alt: Test status
    :target: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions
 
-.. image:: https://img.shields.io/coveralls/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
-   :alt: Test coverage
-   :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}?branch=master
-
-.. image:: https://img.shields.io/codecov/c/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+.. image:: https://img.shields.io/codecov/c/github/{{ 
+   cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
    :alt: Test coverage
    :target: https://app.codecov.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
 
