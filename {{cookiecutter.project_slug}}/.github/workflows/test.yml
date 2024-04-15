@@ -23,7 +23,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [{{ cookiecutter.python_version }}, '3.x']
+        python-version: ['{{ cookiecutter.python_version }}', '3.x']
 
     steps:
       - uses: actions/checkout@v4
