@@ -20,7 +20,3 @@
 
   https://app.codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/new
   https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/settings/secrets/actions/new
-
-- Install the pre-commit linting hook:
-
-  $ pre-commit install

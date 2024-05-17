@@ -9,6 +9,7 @@ git add .
 git commit -m "chore: apply cookiecutter"
 
 gitlint install-hook
+pre-commit install
 
 mkdir tests
 cat TODO
