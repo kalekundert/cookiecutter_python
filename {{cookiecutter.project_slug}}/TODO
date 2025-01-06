@@ -20,3 +20,7 @@
 
   https://app.codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/new
   https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/settings/secrets/actions/new
+
+- Build the documentation:
+
+  https://app.readthedocs.org/dashboard/import/

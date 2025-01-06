@@ -24,6 +24,7 @@ test = [
 doc = [
   'sphinx',
   'sphinx_rtd_theme',
+  'myst_parser',
   'autoclasstoc',
 ]
 {% if cookiecutter.project_type == 'application' -%}
